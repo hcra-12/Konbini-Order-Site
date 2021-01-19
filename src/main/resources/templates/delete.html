@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="../css/delete.css" rel="stylesheet" />
+<title>データ削除</title>
+
+<script> 
+function isCheck() {
+	var arr_checkBoxes = document.getElementsByClassName("CB");
+	var count = 0;
+	for (var i = 0; i < arr_checkBoxes.length; i++) {
+		if (arr_checkBoxes[i].checked) {
+			count++;
+		}
+	}
+	if (count > 0) {
+		return true;
+	} else {
+		window.alert("1つ以上選択してください。");
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+</header>
+
+<div class = "left">
+	<p th:text="${date}"></p>
+	<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<form action = '/delete/confirm' method = "post" name = "form1" onSubmit="return check()">
+<div class = "center">
+	
+	<table>
+		<tr>
+			<td></td><th>商品名</th><th>商品価格</th><th>登録日時</th>
+		</tr>
+		<tr class = "contents" th:each="G : ${Goods}">
+			<td class = "imgClass">
+				<img th:src="@{../image/{G.goodsImage} (G.goodsImage=${G.goodsImage})}"  class = "IMG">
+			</td>
+			<td th:text="${G.goodsName}"></td>
+			<td th:text="${G.goodsPrice}"></td>
+			<td th:text="${G.registryDate}"></td>
+			<td>
+				<input type="checkbox" name="id" th:value="${G.id}" style="transform:scale(2.0)" class="CB">
+			</td>
+		</tr>
+	</table>
+	
+	<table>
+		<tr>
+			<td></td><th>商品名</th><th>発注数</th><th>発注日時</th>
+		</tr>
+		<tr class = "contents" th:each="OG : ${OrderGoods}">
+			<td width = "80" height = "30"></td>
+			<td th:text="${OG.orderName}"></td>
+			<td th:text="${OG.orderNum}"></td>
+			<td th:text="${OG.orderDateTime}"></td>
+			<td>
+				<input type="checkbox" name="id" th:value="${'00' + OG.id}" style="transform:scale(2.0)" class="CB">
+			</td>
+		</tr>
+	</table>
+	
+</div>
+
+<div class = "sBtn">
+	<input type = "submit" value = "確定" class = "submitBtn" id="confirm" onClick="return isCheck()">
+	<button type="button" onclick="location.href='/konbini/'" class = "submitBtn">戻る</button>
+</div>
+</form>
+
+<script type="text/javascript" src="../js/time.js"></script>
+</body>
+
+</html>
+

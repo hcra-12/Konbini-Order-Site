@@ -1,0 +1,83 @@
+@charset "UTF-8";
+header{
+	height : 60px;
+	background: url("../image/canadian.png");
+}
+header-img{
+	display : inline-block;
+	float : left;
+}
+.left{
+	margin-top : 24px;
+	height : 70%;
+	float : left;
+	width : 15%;
+	color : black;
+	text-align : center;
+	margin-bottom : 150px;
+}
+.time{
+	font-size : 50px;
+	border-bottom : 3px solid gray;
+}
+.center{
+	display : block;
+	width : 60%;
+	margin : 0 auto;
+	text-align : center;
+}
+table{
+	border-collapse: collapse;
+	margin-left : 50px;
+	margin : 0 auto;
+	width : 100%;
+}
+table th{
+	background-color : #CCFFCC;
+	font-size : 17px;
+}
+.imgClass{
+	border : none;
+	position: relative;
+    width: 80px; /* 領域の幅を指定 */
+    height: 60px; /* 領域の高さを指定 */
+}
+.IMG{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+.submitBtn{
+	margin-left : 100px;
+	font-size : 30px;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	color: black;/*文字色*/
+	background: #f7f7f7;
+	text-decoration: none;
+	font-size :22px;
+	text-align:center;
+	border-left: solid 5px gray;/*左線*/
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	width : 120px;
+	cursor: pointer;
+	padding : 5px 20px;
+}
+.submitBtn:hover{
+	background: #CCCCCC;
+}
+.sBtn{
+	margin-top : 70px;
+	background-color : #EEFFFF;
+	padding : 2px;
+}
+#confirm{
+	border-left: solid 7px black;/*左線*/
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="../css/orderRegistry.css" rel="stylesheet" />
+<title>商品登録</title>
+</head>
+
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+</header>
+
+<div class = "left">
+	<p th:text="${date}"></p>
+	<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<form action = 'order-regi-conf' method = "post" enctype="multipart/form-data">
+	<div class = "center">
+		<span class = "tag">商品名</span><br>
+		
+		
+		<input type = "text" class = "orderName" size = "300px" name="goodsName" placeholder="メロンパン" required><br>
+		
+		<span class = "tag">商品価格</span><br>
+		<span></span>
+		<input type = "number" class = "" size = "300px" name="goodsPrice" placeholder="180" required/>
+		
+		<div class = "orderimg">
+			<span class = "tag">商品画像</span><br>
+			<div class = "file">
+				選択してください
+				<input id="file-sample" type="file" class = "gImage" name="multipartFile" accept="image/*" required>
+			</div>
+			<img id="file-preview" height="100px" alt="">
+		</div>
+	</div>
+	
+	<div class = "sBtn">
+			<input type = "submit" value = "登録" class = "submitBtn" id="registry">
+			<button type="button" onclick="history.back()" class = "submitBtn">戻る</button>
+	</div>
+</form>
+
+
+<script type="text/javascript" src="../js/time.js"></script>
+
+<script>
+document.getElementById('file-sample').addEventListener('change', function (e) {
+    // 1枚だけ表示する
+    var file = e.target.files[0];
+    // ファイルのブラウザ上でのURLを取得する
+    var blobUrl = window.URL.createObjectURL(file);
+    // img要素に表示
+    var img = document.getElementById('file-preview');
+    img.src = blobUrl;
+});
+</script>
+</body>
+</html>
+

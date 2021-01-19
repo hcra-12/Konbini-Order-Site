@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="../css/order.css" rel="stylesheet" />
+<title>発注</title>
+</head>
+
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+</header>
+
+<div class = "left">
+	<p th:text="${date[0]}"></p>
+	<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<form action = '/order/confirm' method = "post" autocomplete="off">
+<div class = "center">
+
+	<table class = "dateTable">
+		<tr>
+			<th class="leftSide"></th><th class="leftSide"></th>
+			<th th:text="${date[5]}"></th><th th:text="${date[4]}"></th><th th:text="${date[3]}"></th><th th:text="${date[2]}"></th>
+			<th th:text="${date[1]}"></th><th th:text="${date[0]}"></th><td class = "num" ><span>数</span></td>
+		</tr>
+	</table>
+	
+
+	<table th:each="item : ${GOODS}">
+		<tr class = "date">
+			<th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><td class = "black"></td>
+		</tr>
+		<tr class = "orderNum">
+			<td rowspan = "3" class = "IMG">
+				<img th:src="@{../image/{item.goodsImage} (item.goodsImage=${item.goodsImage})}"  class = "IMG2">
+			</td>
+			<th>発注数</th>
+				<td id = "LeftTd"><span th:text="${map5.get(item.goodsName)}" class = "OH"></span></td>
+				<td><span th:text="${map4.get(item.goodsName)}" class = "OH"></span></td>
+				<td><span th:text="${map3.get(item.goodsName)}" class = "OH"></span></td>
+				<td><span th:text="${map2.get(item.goodsName)}" class = "OH"></span></td>
+				<td><span th:text="${map1.get(item.goodsName)}" class = "OH"></span></td>
+				<td><span th:text="${map.get(item.goodsName)}" class = "OH"></span></td>
+				<td class = "Tright"><input type="number" name="ON" value = "0"
+					onfocus="this.value=''" onblur="if(this.value=='')this.value=this.defaultValue"/></td>
+		</tr>
+		<tr>
+			<th>売り上げ</th><td id = "LeftTd"></td><td></td><td></td><td></td><td></td><td></td><td class = "Tright" ></td>
+		</tr>
+		<tr>
+			<th>廃棄</th><td id = "LeftTd"></td><td></td><td></td><td></td><td></td><td></td>
+			<td class = "Tright">
+			<span th:text="${'\' + item.goodsPrice}"></span>
+				<input type="hidden"  name = "GN" th:value = "${item.goodsName}" >
+				<input type="hidden"  name = "GI" th:value = "${item.goodsImage}" >
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class = "sBtn">
+		<input type = "submit" value = "送信" class = "submitBtn">
+		<button type="button" onclick="history.back()" class = "submitBtn">戻る</button>
+</div>
+</form>
+
+<script type="text/javascript" src="../js/time.js"></script>
+</body>
+</html>

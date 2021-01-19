@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="../css/user.css" rel="stylesheet" />
+<title>社員管理</title>
+</head>
+
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+</header>
+
+<div class = "left">
+	<p th:text="${date}"></p>
+	<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<form action = '/user/registry' method = "post">
+<div class = "center">
+	
+	<table>
+		<tr>
+			<td></td><th>社員番号</th><th>社員名</th><th>パスワード</th><th>入社日</th>
+		</tr>
+		<tr class = "contents" th:each="U : ${users}">
+			<td class = "imgClass"><img src="../image/user.png" class = "IMG"></td>
+			<td th:text="${U.staffNum}"></td><td th:text="${U.userName}"></td><td>********</td><td>12月11日(月)</td>
+		</tr>
+	</table>
+	
+</div>
+
+<div class = "sBtn">
+		<!-- <input type = "submit" value = "社員登録" class = "submitBtn"> -->
+		<button type="button" onclick="location.href='/konbini/'" class = "submitBtn">戻る</button>
+</div>
+</form>
+
+<script type="text/javascript" src="../js/time.js"></script>
+</body>
+
+</html>

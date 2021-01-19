@@ -1,0 +1,113 @@
+@charset "UTF-8";
+header{
+	height : 60px;
+	background: url("../image/canadian.png");
+}
+header-img{
+	display : inline-block;
+	float : left;
+}
+.left{
+	display : inline;
+	margin-top : 24px;
+	height : 70%;
+	float : left;
+	width : 15%;
+	color : black;
+	text-align : center;
+	margin-bottom : 150px;
+}
+.time{
+	font-size : 50px;
+	border-bottom : 3px solid gray;
+}
+.center{
+	width : 40%;
+	height : 70%;
+	margin : 0 auto;
+	margin-top : 50px;
+	border : solid 2px black;
+	padding : 30px;
+	border-radius : 10px;
+}
+.tag{
+	
+}
+input[type="text"],input[type="number"]  {
+	width: 40%; 
+	height : 20px;
+	font-size : 16px;
+	text-align : center;
+	border : 2px solid #DDDDDD;
+	border-radius : 5px;
+	padding : 5px 0px;
+}
+::placeholder {
+  color: #cdd;
+}
+.file {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding: 1em;
+    border: 3px solid #005FFF;
+    border-radius : 50px;
+    color:white;
+    margin-right : 130px;
+    background-color : #136FFF;
+}
+.orderimg{
+	margin-top : 30px;
+	padding-bottom : 20px;
+}
+.file{
+	font-weight: 600;
+}
+.file input[type="file"] {
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    font-size: 30px;
+    cursor: pointer;
+}
+#file-preview{
+	padding : 20px;
+	border : 3px dashed lightgray;
+	width : 100px;
+}
+.submitBtn{
+	margin-left : 100px;
+	font-size : 30px;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	color: black;/*文字色*/
+	background: #f7f7f7;
+	text-decoration: none;
+	font-size :22px;
+	text-align:center;
+	border-left: solid 5px gray;/*左線*/
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	width : 120px;
+	cursor: pointer;
+	padding : 5px 20px;
+}
+#registry{
+	border : solid 2px blue;
+	border-left: solid 5px blue;/*左線*/
+}
+.submitBtn:hover{
+	background: #CCCCCC;
+}
+.sBtn{
+	margin-top : 30px;
+	background-color : #EEFFFF;
+	padding : 2px;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 

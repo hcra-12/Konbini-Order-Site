@@ -1,0 +1,139 @@
+@charset "UTF-8";
+header{
+	height : 60px;
+	background: url("../image/canadian.png");
+}
+header-img{
+	display : inline-block;
+	float : left;
+}
+.left{
+	margin-top : 24px;
+	height : 70%;
+	float : left;
+	width : 15%;
+	color : black;
+	text-align : center;
+	margin-bottom : 150px;
+}
+.time{
+	font-size : 50px;
+	border-bottom : 3px solid gray;
+}
+.center{
+	width : 70%;
+	margin : 0 auto;
+	text-align : center;
+}
+table{
+	border-collapse: collapse;
+	margin-left : 50px;
+	margin : 0 auto;
+	border-bottom : solid 3px lightgray;
+}
+table th{
+	background-color : #AEFFBD;
+	font-size : 17px;
+	width : 125px;
+	font-weight: normal;
+}
+table td{
+	border : 1px dashed orange;
+}
+#LeftTd{
+	border-left : none;
+}
+.leftSide{
+	background-color : white;
+	border : none;
+}
+.IMG{
+	border : none;
+	border-top : 1px solid orange;
+	position: relative;
+    width: 80px; /* 領域の幅を指定 */
+    height: 80px; /* 領域の高さを指定 */
+}
+.IMG2{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+.orderNum td{
+	border-top : none;
+}
+.Partition{
+	height : 10px;
+}
+.Tright{
+	border : none;
+	padding : 5px;
+	width : 50px;
+	color : gray;
+}
+input {
+    width:25px;
+    text-align: center;
+    border: solid 2px #555555;
+    border-radius : 3px;
+}
+.OH{
+	font-size : 16px;
+	color : #CC0033;
+	font-weight: 600;
+}
+.num{
+	text-align : center;
+	border : none;
+	font-weight : bold;
+	width : 59px;
+	color : white;
+	background-color : #222222;
+}
+th.num{
+	padding : 0px 11px;
+}
+tr.date th{
+	background-color : lightgray;
+	border : none;
+}
+.submitBtn{
+	margin-left : 100px;
+	font-size : 30px;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	color: black;/*文字色*/
+	background: #f7f7f7;
+	text-decoration: none;
+	font-size :22px;
+	text-align:center;
+	border-left: solid 5px gray;/*左線*/
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	width : 120px;
+	cursor: pointer;
+	padding : 5px 20px;
+}
+.submitBtn:hover{
+	background: #CCCCCC;
+}
+.sBtn{
+	margin-top : 70px;
+	background-color : #EEFFFF;
+	padding : 2px;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+.black{
+	background-color : lightgray;
+	border : none;
+}

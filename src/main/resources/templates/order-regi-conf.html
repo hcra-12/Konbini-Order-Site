@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="/css/order-regi-conf.css" rel="stylesheet" />
+<title>登録確認</title>
+</head>
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+	
+</header>
+
+<div class = "centerPare">
+<div class = "center">
+
+	<h1 th:text="|登録完了：${date}"></h1>
+	<table>
+		<tr class = "date">
+			<th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+		</tr>
+		<tr class = "orderNum">
+			<td rowspan = "3" class = "IMG">
+				<img th:src="@{../image/{Gimage} (Gimage=${Gimage})}"  class = "IMG2">
+			</td>
+			<th></th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+		</tr>
+		<tr>
+			<th></th><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<th></th><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	
+	
+</div>
+</div>
+
+<form action="/konbini/" method = "post" class = "bBtn">
+	<input type="submit" value="トップに戻る" class = "backBtn">
+</form>
+
+
+
+</body>
+</html>

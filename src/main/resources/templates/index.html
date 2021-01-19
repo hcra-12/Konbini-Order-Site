@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="/css/index.css" rel="stylesheet" />
+<title>初期画面</title>
+</head>
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+	
+	<div class = "num">
+		<script>
+	        var value=prompt("社員番号");
+	        document.write("社員番号："+value);
+		</script>
+	</div>
+	
+	<script>/**削除管理パスワード*/
+	function myEnter(){
+	     myPassWord=prompt("管理者専用ページです","");
+	     if ( myPassWord == "pass" )
+	         location.href="delete";
+	}
+	</script>
+</header>
+
+<div class = "left">
+<script type="text/javascript" src="../js/time.js"></script>
+<p th:text="${date}"></p>
+<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<div class = "center">
+<table class = "t1">
+	<tr>
+		<td><a href="#" class = "order" id = "1" onclick = "location.href='order'">商品発注</a><br></td>
+		<td><a href="#" class = "regist" onclick = "location.href='orderregistry'">商品登録</a></td>
+	</tr>
+</table>
+<table class = "t2">
+	<tr>
+		<td><a href="#" class = "btn" id = "green" onclick = "location.href='user'">社員管理</a></td>
+		<td><a href="#" class = "btn" id = "blue">Btn 1</a></td>
+	</tr>
+	<tr>
+		<td><a href="#" class = "btn">Btn 2</a></td>
+		<td><a href="#" class = "btn">Btn 3</a></td>
+	</tr>
+	<tr>
+		<td><a href="#" class = "btn">Btn 4</a></td>
+		<td><a href="#" class = "btn" id = "delete" onclick = "myEnter()">削除管理</a></td>
+	</tr>
+</table>
+</div>
+
+
+<div class = "test">
+	<span class = "osirase">発注履歴</span>
+	<div class = "test2">
+
+	<th:block th:each="OG : ${#numbers.sequence(orderGoods.size() - 1, 0, -1)}">
+		<span th:text="${orderGoods[OG].orderDateTime} + '&emsp;発注'  + '&emsp;'"></span>
+		<span th:text="${orderGoods[OG].orderName}"></span>
+		<span th:text="'&emsp; × &emsp;' + ${orderGoods[OG].orderNum}"></span>
+		<br>
+	</th:block>
+	</div>
+</div>
+
+</body>
+</html>
+
