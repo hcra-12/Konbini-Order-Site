@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap');
+body{
+	font-family: 'Sawarabi Gothic', sans-serif;
+}
+.time{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 header{
 	height : 60px;
 	background: url("../image/canadian.png");
@@ -14,7 +22,7 @@ header-img{
 	width : 15%;
 	color : black;
 	text-align : center;
-	margin-bottom : 150px;
+	margin-bottom : 50px;
 }
 .time{
 	font-size : 50px;
@@ -55,29 +63,31 @@ table th{
     margin: auto;
 }
 .submitBtn{
-	margin-left : 100px;
+	margin-left : 40px;
 	font-size : 30px;
 	margin-top : 20px;
 	margin-bottom : 20px;
 	color: black;/*文字色*/
-	background: #f7f7f7;
-	text-decoration: none;
+	background: white;
 	font-size :22px;
 	text-align:center;
+	border : none;
 	border-left: solid 5px gray;/*左線*/
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-	width : 120px;
+	width : 150px;
 	cursor: pointer;
-	padding : 5px 20px;
+	padding : 11px 30px;
 }
 .submitBtn:hover{
-	background: #CCCCCC;
+	background: gray;
 }
 .sBtn{
 	margin-top : 70px;
-	background-color : #EEFFFF;
 	padding : 2px;
 }
 #confirm{
 	border-left: solid 7px black;/*左線*/
+}
+button, input {
+font-family : inherit;
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>calendar demo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	
+	<link href='../lib/main.css' rel='stylesheet' />
+	<link href="/css/calendar.css" rel="stylesheet" />
+	<script src='../lib/main.js'></script>
+</head>
+
+<body>
+
+<header>
+	<img src="../image/7logo.jpg" height = "60px">
+</header>
+
+<div class = "left">
+	<p th:text="${date}"></p>
+	<p id="RealtimeClockArea2" class = "time"></p>
+</div>
+
+<script th:inline="javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+	      //initialView: 'dayGridMonth',  // オプション　（月表示）
+	      timeZone: 'Asia/Tokyo',
+	      locale: 'ja',
+	      firstDay: 0,
+	      height : 'auto',
+	      headerToolbar: {
+	        left: "dayGridMonth",
+	        center: "title",
+	        right: "today prev,next"
+	      },
+	      buttonText: {
+	        today: '今月',
+	        month: '月',
+	        list: 'リスト'
+	      },
+	      dayCellContent: function(e) {
+	        e.dayNumberText = e.dayNumberText.replace('日', '');
+	      },
+	      events : 'api/event/all',
+      
+    });
+    calendar.render();　// カレンダーの初期化（再レンダリング）
+    
+});
+</script>
+	
+<div class = "center">
+  <div id='calendar'></div>
+</div>
+
+<button type="button" onclick="location.href='/konbini/'" class = "submitBtn">戻る</button>
+
+<script type="text/javascript" src="../js/time.js"></script>
+</body>
+</html>

@@ -26,10 +26,14 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	compile "org.webjars:jquery:2.0.3"
+	compile "org.webjars.bower:moment:2.19.1"
+	compile "org.webjars.bower:fullcalendar:3.5.1"
 	
 	//lombokの設定
 	compileOnly 'org.projectlombok:lombok:1.18.16'
 	annotationProcessor 'org.projectlombok:lombok:1.18.16'
+	
 }
 
 test {

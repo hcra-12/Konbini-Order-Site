@@ -35,4 +35,7 @@ public class OrderGoods {
 	
 	@Column(name="Order_Date")
 	private String orderDate;
+	
+	@Column(name="Order_Date2")
+	private String orderDate2;
 }

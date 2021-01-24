@@ -1,7 +1,15 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap');
+body{
+	font-family: 'Sawarabi Gothic', sans-serif;
+}
+.time{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 header{
 	height : 60px;
-	background: url("../image/canadian.png");
+	background: url("../image/storaipu.jpg");
 }
 header-img{
 	display : inline-block;
@@ -25,6 +33,7 @@ header-img{
 .center{
 	width : 75%;
 	margin : 0 auto;
+	margin-top : 15px;
 	padding-right : 105px;
 }
 .time{
@@ -44,7 +53,7 @@ a{
   margin: 10px 0;
   display: block;
   color: #ff7c5c;/*文字色*/
-  background: #f7f7f7;
+  background: #FAFAFA;
   text-decoration: none;
   font-weight: bold;
   border-radius: 3px;
@@ -92,11 +101,15 @@ a.regist:before{
 #blue{
 	border-left: solid 6px #33CCFF;
 }
+#blue:before{
+	background: url("../image/calendar.jpg") no-repeat;
+	background-size: cover;
+}
 #delete:before{
 	background: url("../image/trash.jpg") no-repeat;
 	background-size: cover;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 968px){
   a{
     padding: 0.5em 2em;
     margin: 10px auto;
@@ -122,19 +135,29 @@ table.t2 td{
 	border-top : 1px solid lightgray;
 }
 .osirase{
-	padding : 0px 10px;
-	border : solid 3px gray;
+	padding : 0px 15px;
+	background : #5d627b;
+	border : none;
+	color : white;
 	border-radius: 10px 10px 0 0;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 .test{
 	width : 60%;
 	margin : 0 auto;
-	margin-top : 20px;
+	margin-top : 30px;
 }
 .test2{
-	background-color : lightblue;
-	border : solid 3px gray;
-	padding : 0px 10px;
+    padding: 0.5em 1em;
+    margin 0 auto;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.test2 span {
+    margin: 0; 
+    padding: 0;
 }
 img{
 	background-size:auto 60px;

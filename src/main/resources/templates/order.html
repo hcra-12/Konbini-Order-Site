@@ -54,7 +54,7 @@
 		<tr>
 			<th>廃棄</th><td id = "LeftTd"></td><td></td><td></td><td></td><td></td><td></td>
 			<td class = "Tright">
-			<span th:text="${'\' + item.goodsPrice}"></span>
+			<span th:text="${'&yen' + item.goodsPrice}"></span>
 				<input type="hidden"  name = "GN" th:value = "${item.goodsName}" >
 				<input type="hidden"  name = "GI" th:value = "${item.goodsImage}" >
 			</td>
@@ -64,7 +64,7 @@
 </div>
 
 <div class = "sBtn">
-		<input type = "submit" value = "送信" class = "submitBtn">
+		<input type = "submit" value = "送信" class = "submitBtn" id = "submit">
 		<button type="button" onclick="history.back()" class = "submitBtn">戻る</button>
 </div>
 </form>
