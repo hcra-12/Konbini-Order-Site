@@ -16,8 +16,8 @@ import com.konbini.model.entity.OrderGoods;
 
 
 @RestController
-@RequestMapping("konbini/api/event")
-public class RestWebController {
+@RequestMapping("konbini/api")
+public class CalendarRestController {
 	
 	@Autowired
 	private OrderGoodsRepository OrderGoodsRepos;
@@ -26,7 +26,7 @@ public class RestWebController {
     /**カレンダーに表示するEvent情報を取得
      * @return Event情報をjsonエンコードした文字列*/
 	
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/event")
     public String getEvents() {
         String jsonMsg = null;
         try {

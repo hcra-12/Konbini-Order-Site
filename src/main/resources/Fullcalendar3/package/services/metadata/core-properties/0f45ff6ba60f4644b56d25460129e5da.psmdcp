@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Adam Shaw</dc:creator><dc:description>A full-sized, drag and drop calendar for jQuery
-    	
-    	Fullcalendar is Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses. 
-    	
-    	Copyright (c) 2011 Adam Shaw (http://arshaw.com)</dc:description><dc:identifier>jQuery.Fullcalendar</dc:identifier><version>3.5.1</version><keywords>Fullcalendar jQuery Calendar</keywords><dc:subject>NuGet Package Explorer</dc:subject></coreProperties>

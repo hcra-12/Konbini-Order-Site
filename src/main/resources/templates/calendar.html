@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>calendar demo</title>
+	<title>カレンダー</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
 	
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	      dayCellContent: function(e) {
 	        e.dayNumberText = e.dayNumberText.replace('日', '');
 	      },
-	      events : 'api/event/all',
+	      events : 'api/event',
       
     });
     calendar.render();　// カレンダーの初期化（再レンダリング）
